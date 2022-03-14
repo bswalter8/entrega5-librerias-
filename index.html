@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Libreria de Babel</title>
+</head>
+<body>
+    <section>
+        <nav>
+            <h1>Libreria de Babel</h1>
+           
+        
+            <select id="Ordenar">
+                <option value="nombre">Nombre</option>
+                <option value="autor" selected>Autor</option>
+                <option value="mayor">Mayor precio</option>
+                <option value="menor">Menor precio</option>
+            </select>
+            <select id="Categoria">
+                <option value="clasicos">Clasicos</option>
+                <option value="todos" selected>Todos</option>
+                <option value="poesia">Poesia</option>
+                <option value="modernos">Modernos</option>
+                <option value="contemporaneos">Contemporaneos</option>
+            </select>
+            
+        </nav>  
+        <div class="carrito-container">           
+            <button type="button" id="b_carrito" class='lined thick carrito_Boton'></button> 
+            <p id="num_Carrito">1</p>
+        </div>   
+
+        <div id="libros" class="items"></div>
+        <br>
+        
+      
+        <!-- carrito Modal -->
+        <div id="carrito_Modal" class="c_modal">
+            
+            <!-- carrito content -->
+            <div class="carrito-content">
+            
+                <span class="close" id="carrito_Close">&times;</span>
+                <p>Su carrito....</p>
+                <ul id="lista_carrito"></ul>
+                <button type="button" id="b_comprar">Comprar</button> 
+            </div>
+        
+        </div>
+            
+        <!-- comprar Modal -->
+        <div id="comprar_Modal" class="compra_modal">
+            
+            <!-- comprar content -->
+            <div class="compra-content">
+            
+                <span class="close" id="compra_Close">&times;</span>
+            
+                <div id="valor_compra"></div>
+                <p>Inserte el valor a pagar:</p>
+                <input type="text" id="valor_pago" name="name" required maxlength="8" size="10" value="0">
+                <button type="button" id="b_pagar">Pagar</button>
+                <div id="mensaje_finalcompra"></div>
+            </div>
+        
+        </div>
+        
+
+        <!-- agregado Modal -->
+        <div id="agregado_Modal" class="agregado_modal">
+            
+            <!-- agregado content -->
+            <div class="agregado-content">
+                
+                <span class="close" id="agregado_Close">&times;</span>
+                <div id="agregado_item"></div>
+            </div>
+        
+        </div>
+        <br>
+        <br>
+    </section>
+    
+    <script src="entrega5.js"></script>
+</body>
+</html>
